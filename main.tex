@@ -1,0 +1,121 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\title{Fundamentos de Curvas de Tasas de Interés Colateralizados}
+\author{Tú Nombre}
+\date{\today}
+
+\begin{document}
+	
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}{Introducción}
+		\begin{itemize}
+			\item Transición del mercado a transacciones estandarizadas y despejadas.
+			\item Función de las CCP en la gestión de riesgos.
+			\item Ajustes de valoración crediticia (XVAs) y CVA.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Colateral y Acuerdo de Soporte de Crédito (CSA)}
+		\begin{itemize}
+			\item Importancia del colateral en negociaciones bilaterales.
+			\item Uso del Acuerdo de Soporte de Crédito (CSA) de ISDA.
+			\item Gestión del cálculo y transferencia de colateral.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Contrapartes Centrales de Compensación (CCP)}
+		\begin{itemize}
+			\item Rol de las CCP en la gestión de riesgos después de la crisis crediticia.
+			\item Intermediación y compensación de operaciones financieras.
+			\item Depósitos para cubrir pérdidas sistémicas e idiosincráticas.
+			\item Pagos de margen inicial y margen de variación.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Funciones de las CCP}
+		\begin{itemize}
+			\item Reducción de múltiples riesgos en transacciones.
+			\item Garantía de términos de operaciones en caso de incumplimiento.
+			\item Minimización de transacciones y exposiciones crediticias.
+			\item Beneficios del netting en operaciones compensatorias.
+			\item Importancia de contratos estandarizados.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Tasas de Interés Colateralizados}
+		\begin{itemize}
+			\item Definición de tasas de interés colateralizados.
+			\item Importancia en la valoración de activos financieros.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Construcción de Curvas de Tasas de Interés}
+		\begin{itemize}
+			\item Selección de instrumentos: Bonos, swaps, repos, etc.
+			\item Calibración de curvas: Ajuste a precios observados en el mercado.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Colateral en Transacciones Financieras}
+		\begin{itemize}
+			\item Colateral: Activos entregados por una parte para mitigar riesgos en una transacción financiera.
+			\item Tipos de colateral: Efectivo, valores, bienes inmuebles, etc.
+			\item Importancia: Reduce el riesgo de incumplimiento y protege a las partes involucradas.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Riesgo de Crédito en Transacciones Financieras}
+		\begin{itemize}
+			\item Riesgo de crédito: Posibilidad de que una contraparte no cumpla sus obligaciones financieras.
+			\item Impacto en la valoración: Tasas de interés más altas para compensar el riesgo.
+			\item Evaluación del riesgo: Calificación crediticia, análisis financiero, historial de pagos, etc.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Credit Support Annex (CSA)}
+		\begin{itemize}
+			\item Credit Support Annex (CSA): Acuerdo que establece los términos para el manejo del colateral en transacciones financieras.
+			\item Funciones: Establece las reglas para el intercambio de colateral y el cálculo de márgenes.
+			\item Protección ante riesgos: Proporciona un marco para manejar el riesgo de crédito y garantizar la seguridad de las transacciones.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Forward Rate Agreements (FRAs)}
+		\begin{itemize}
+			\item Definición: Contrato para fijar una tasa de interés futura en una fecha determinada.
+			\item Fórmula de valoración: $V = N \times \text{Notional} \times \Delta t \times (R - F)$
+			\item Donde $N$ es el número de días, \text{Notional} es el monto principal, $\Delta t$ es el factor de tiempo, $R$ es la tasa acordada y $F$ es la tasa forward.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Interest Rate Swaps (IRS)}
+		\begin{itemize}
+			\item Definición: Intercambio de flujos de efectivo basados en tasas de interés.
+			\item Fórmula de valoración: $V = \sum_{t=1}^{T} \frac{N \times \Delta t \times (R_t - L_t)}{(1+R_t)^t}$
+			\item Donde $N$ es el monto principal, $\Delta t$ es el factor de tiempo, $R_t$ es la tasa de interés acordada en el período $t$, y $L_t$ es la tasa LIBOR en el período $t$.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Cross Currency Swaps (CCS)}
+		\begin{itemize}
+			\item Definición: Intercambio de flujos de efectivo en diferentes monedas.
+			\item Fórmula de valoración: $V = \sum_{t=1}^{T} \frac{N \times \Delta t \times (R_{\text{dom}, t} - R_{\text{for}, t})}{(1+R_{\text{dom}, t})^t}$
+			\item Donde $N$ es el monto principal, $\Delta t$ es el factor de tiempo, $R_{\text{dom}, t}$ es la tasa de interés doméstica en el período $t$, y $R_{\text{for}, t}$ es la tasa de interés extranjera en el período $t$.
+		\end{itemize}
+	\end{frame}
+	
+	% Resto de las diapositivas ...
+	
+	\begin{frame}{Conclusiones}
+		\begin{itemize}
+			\item Importancia en la toma de decisiones financieras.
+			\item Continuo monitoreo y actualización de las curvas en un entorno dinámico.
+		\end{itemize}
+	\end{frame}
+	
+\end{document}

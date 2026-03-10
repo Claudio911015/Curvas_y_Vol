@@ -1,0 +1,32 @@
+\documentclass{beamer}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\title{Cálculo Sintético de la Tasa Forward}
+\author{Tú Nombre}
+\date{\today}
+
+\begin{document}
+	
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}{Introducción}
+		La tasa forward es la tasa de intercambio de una divisa por otra en una fecha futura. Se puede calcular a partir de la tasa spot de FX y los factores de descuento. La tasa forward sintética se puede replicar mediante la negociación de la tasa spot de FX y la realización simultánea de un préstamo y un depósito para igualar la posición spot y replicar una tasa forward de FX. Matemáticamente, esto se puede expresar como:
+		\[
+		F(t,T)\text{GBP/EUR} = \frac{1}{S} F(t,T)\text{EUR/GBP} \times P(t,T)\text{GBP/EUR}
+		\]
+		donde $F(t,T)$ es la tasa forward, $P(t,T)$ es el factor de descuento y $S$ es la tasa spot de FX.
+	\end{frame}
+	
+	\begin{frame}{Relación de Invariancia Forward de FX}
+		La relación de invariancia forward de FX establece que la tasa forward de FX sintética es independiente de la elección de la moneda de colateral CSA. Esto significa que la tasa forward de FX sintética es la misma independientemente de si se utiliza un CSA estándar, nativo o no estándar.
+	\end{frame}
+	
+	\begin{frame}{Cálculo de Factores de Descuento Ajustados por Colateral CSA}
+		Los factores de descuento ajustados por colateral CSA se pueden calcular utilizando las curvas de rendimiento de la moneda de colateral y la moneda subyacente. Para un CSA estándar o nativo, los factores de descuento ajustados por colateral CSA son iguales a los factores de descuento sin ajustar. Para un CSA no estándar, los flujos de efectivo deben ser descontados con factores de descuento ajustados por la elección de la moneda de colateral CSA.
+	\end{frame}
+	
+\end{document}

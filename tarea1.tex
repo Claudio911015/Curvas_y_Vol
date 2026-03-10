@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\title{Tarea: Smoothing Spline en Interpolación de Tasas de Descuento}
+\author{Claudio Cuevas Pazos}
+\date{\today}
+
+\begin{document}
+	
+	\maketitle
+	
+	\section*{Ejercicio 1: Smoothing Spline para Interpolación de Tasas de Descuento}
+	
+	El método de interpolación "Smoothing Spline" es una técnica utilizada para interpolar datos suavemente, minimizando la oscilación entre los puntos interpolados. En este ejercicio, vamos a crear un método de interpolación utilizando el algoritmo "Smoothing Spline" para interpolar las tasas simples de una curva de descuento.
+	
+	Investiga sobre el método "Smoothing Spline" y cómo se utiliza para interpolar curvas de datos. Puedes encontrar información detallada en la documentación de la paquetería \texttt{scipy} en el enlace: \url{https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.make\_smoothing\_spline.html}.
+	
+	\section*{Implementación y Evaluación}
+	
+	Utilizaremos la paquetería \texttt{scipy} en Python para implementar el método de "Smoothing Spline" y medir su eficacia. A continuación, se presenta el código de implementación:
+	
+	\begin{verbatim}
+		# Importar las librerías necesarias
+		import numpy as np
+		from scipy.interpolate import make_smoothing_spline
+		import matplotlib.pyplot as plt
+		
+		# Datos de ejemplo: tasas simples y puntos de interpolación
+		x_data = np.array([1, 2, 3, 4, 5, 6, 7])
+		y_data = np.array([0.05, 0.045, 0.04, 0.035, 0.032, 0.03, 0.028])
+		x_interp = np.linspace(1, 7, 100)  # Puntos para la interpolación
+		
+		# Variar el parámetro lambda y realizar la interpolación
+		lambda_values = [0.01, 0.1, 1, 10]
+		plt.figure(figsize=(10, 6))
+		
+		for lambda_val in lambda_values:
+		spline = make_smoothing_spline(x_data, y_data, smooth=lambda_val)
+		y_interp = spline(x_interp)
+		plt.plot(x_interp, y_interp, label=f'Lambda={lambda_val}')
+		
+		plt.scatter(x_data, y_data, color='red', label='Datos Originales')
+		plt.xlabel('Período')
+		plt.ylabel('Tasa de Descuento')
+		plt.title('Interpolación con Smoothing Spline')
+		plt.legend()
+		plt.grid(True)
+		plt.show()
+	\end{verbatim}
+	
+	Ejecuta el código y observa cómo cambia la interpolación variando el parámetro lambda. Comenta los resultados obtenidos al calibrar una curva de descuento. ¿Qué sucede cuando aumentas o disminuyes el valor de lambda?
+	
+\end{document}

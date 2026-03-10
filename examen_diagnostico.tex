@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+\begin{document}
+	
+	\title{Examen Diagnóstico de Métodos Numéricos y tasas de interés}
+	\date{}
+	\maketitle
+	
+	Nombre: \underline{\hspace{6cm}} 
+	\\
+	\\
+	Fecha: \underline{\hspace{6cm}}
+	
+	\section*{Parte A: Interpolación}
+	
+	\begin{enumerate}
+		\item Mencione los métodos de interpolación que conozca.
+		
+		\item Explica en qué consiste el método de interpolación polinómica y menciona una ventaja y una desventaja de su uso.
+		
+		\item Utiliza el método de interpolación linear y \textit{log-linear} para encontrar el valor de $f(3.5)$ dada la siguiente tabla:
+		
+		\begin{tabular}{|c|c|}
+			\hline
+			$x$ & $f(x)$ \\
+			\hline
+			0 & 1 \\
+			1 & 3 \\
+			4 & 10 \\
+			\hline
+		\end{tabular}
+	\end{enumerate}
+	
+	\section*{Parte B: Optimización}
+	
+	\begin{enumerate}[resume]
+		\item Mencione los métodos de optimización que conozca para minimizar/maximizar funciones.
+		
+		\item Encuentra el valor mínimo de la función $f(x) = x^3 - 6x^2 + 9x + 2$ utilizando el método de la derivada.
+	\end{enumerate}
+	
+	\section*{Parte C: Encontrar Ceros}
+	
+	\begin{enumerate}[resume]
+		\item Define el método de la bisección y menciona una situación en la que este método podría ser preferible sobre otros métodos de encontrar ceros.
+		
+		\item Utiliza el método de la bisección para encontrar una aproximación de la solución de la ecuación $x^2 - 4x + 3 = 0$ en el intervalo $[0, 3]$.
+		
+		\item Describe brevemente el método de Newton-Raphson y menciona una condición bajo la cual el método puede converger lentamente o incluso diverger.
+		
+		\item Aplica el método de Newton-Raphson para encontrar la raíz positiva de la ecuación $\cos(x) - x = 0$. Utiliza $x_0 = 1$ como punto de partida y realiza dos iteraciones.
+	\end{enumerate}
+	
+	\section*{Parte C: Conceptos de tasas de interés}
+	\begin{enumerate}
+		\item Mencione las convenciones de conteo de días que conozca.
+		
+		\item Mencione las convenciones de mercado que conozca para expresar a una tasa de interés.
+		
+		\item Suponga que desea valuar un bono con pagos de cupones semestrales, el plazo de dicho bono es 2 años, la tasa cupón es del 6\% anual pagadera cada seis meses y el nocional es \$1,000,000.00 mxn. Si la \textit{Yield To Maturity} del bono es del 5.3\% anual, lineal \textit{ACT/360}, cuál es el precio del bono?
+		
+		\item Mencione las tasas de interés de referencia que conozca.
+		
+		\item Defina qué es un Futuro de tasas de interés y un \textit{Forward Rate Agreement} explicando las diferencias entre ambos instrumentos.
+		
+		\item Defina qué es un \textit{Interest Rate Swap}, mencionando sus principales características.
+	\end{enumerate}
+\end{document}
